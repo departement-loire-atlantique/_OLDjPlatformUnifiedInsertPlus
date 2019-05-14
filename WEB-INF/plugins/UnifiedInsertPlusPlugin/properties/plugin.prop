@@ -6,7 +6,7 @@ media.template.default.URL.flikr.id-regex:  \\/photos\\/((:?[a-zA-Z0-9@]*\\/*)*)
 
 # Calameo
 media.template.default.URL.calameo.enabled:   true
-media.template.default.URL.calameo.regex:     ^(https?:)?//((www\\.fr\\.calameo\\.com/read))/.*
+media.template.default.URL.calameo.regex:     ^(https?:)?//((fr\\.calameo\\.com/read))/.*
 media.template.default.URL.calameo.jsp:       /plugins/UnifiedInsertPlusPlugin/jsp/media/url/mediaTemplateCalameo.jsp
 media.template.default.URL.calameo.id-regex:  \\/read\\/([a-zA-Z0-9]*)
 
