@@ -19,9 +19,12 @@ Les contenus sous forme de simple lien sont au format : <jalios:link data-jalios
 - Flick
 - SoundCloud
 - Fragment HTML
-- Liste de document (Type de contenu repris de l'intranet) 
+- Liste de documents (Type de contenu repris de l'intranet) 
 - Liste de sites
 - Portlet
+
+
+### TODO Liste de documents
 
 ### Calameo
 
