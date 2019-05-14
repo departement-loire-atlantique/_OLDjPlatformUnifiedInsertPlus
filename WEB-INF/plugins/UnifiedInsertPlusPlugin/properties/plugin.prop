@@ -1,18 +1,19 @@
+# Flikr
+media.template.default.URL.flikr.enabled:   true
+media.template.default.URL.flikr.regex:     ^(https?:)?//((www\\.flickr\\.com))/.*
+media.template.default.URL.flikr.jsp:       /plugins/UnifiedInsertPlusPlugin/jsp/media/url/mediaTemplateFlickr.jsp
+media.template.default.URL.flikr.id-regex:  \\/photos\\/((:?[a-zA-Z0-9@]*\\/*)*)
 
-# ----------------------------------------------------------------------
-# Templates {usage = jcmsplugin.plugin.sample}
-# ----------------------------------------------------------------------
+# Calameo
+media.template.default.URL.calameo.enabled:   true
+media.template.default.URL.calameo.regex:     ^(https?:)?//((www\\.fr\\.calameo\\.com/read))/.*
+media.template.default.URL.calameo.jsp:       /plugins/UnifiedInsertPlusPlugin/jsp/media/url/mediaTemplateCalameo.jsp
+media.template.default.URL.calameo.id-regex:  \\/read\\/([a-zA-Z0-9]*)
 
-# Declaration of a new Usage
-# jcms.resource.default-template.{jcmsplugin.plugin.sample}: custom/jcms/doSampleDisplay.jsp
 
-# Declaration of a new Usage for FullDisplay
-# I18N to cut&past in en.prop / fr.prop
-# ui.editportlet.usage.{jcmsplugin.plugin.sample}: Usage label
+# Content Unified Insert UI
+unified-insert.items.content.jsp: plugins/UnifiedInsertPlusPlugin/jsp/content/unifiedInsertContent.jsp
+unified-insert.items.content.icon: glyph: glyphicons-article
 
-# Declaration of a new Usage for Skin
-# I18N to cut&past in en.prop / fr.prop
-# ui.editportlet.usage.skin.{jcmsplugin.plugin.sample}: Usage label for skin
-
-# LESS
-# channel.less.plugins/{Name}/css/plugin.css:    plugins/{Name}/css/plugin.less
+# Content Media/Data template
+media.data-template.default.Content: /plugins/UnifiedInsertPlusPlugin/jsp/content/mediaTemplateContent.jsp
