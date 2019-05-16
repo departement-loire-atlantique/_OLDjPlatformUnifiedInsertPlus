@@ -10,6 +10,12 @@ media.template.default.URL.calameo.regex:     ^(https?:)?//((fr\\.calameo\\.com)
 media.template.default.URL.calameo.jsp:       /plugins/UnifiedInsertPlusPlugin/jsp/media/url/mediaTemplateCalameo.jsp
 media.template.default.URL.calameo.id-regex:  \\/read\\/([a-zA-Z0-9]*)
 
+# SoundCloud
+media.template.default.URL.soundcloud.enabled:   true
+media.template.default.URL.soundcloud.regex:     ^(https?:)?//((soundcloud\\.com))/.*
+media.template.default.URL.soundcloud.jsp:       /plugins/UnifiedInsertPlusPlugin/jsp/media/url/mediaTemplateSoundCloud.jsp
+media.template.default.URL.soundcloud.id-regex:  \\/read\\/([a-zA-Z0-9]*)
+
 
 # Content Unified Insert UI
 unified-insert.items.content.jsp: plugins/UnifiedInsertPlusPlugin/jsp/content/unifiedInsertContent.jsp
