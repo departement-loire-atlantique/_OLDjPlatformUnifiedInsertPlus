@@ -18,7 +18,7 @@ Les contenus sous forme de simple lien sont au format : <jalios:link data-jalios
 - SlideShare
 - Flick
 - SoundCloud
-- Fragment HTML
+- Fragment HTML (seuls les utilisateurs habilités pour contribuer ce type de contenu)
 - Liste de documents (Type de contenu repris de l'intranet) 
 - Liste de sites
 - Portlet

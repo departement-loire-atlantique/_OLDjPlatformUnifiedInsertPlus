@@ -23,3 +23,6 @@ unified-insert.items.content.icon: glyph: glyphicons-article
 
 # Content Media/Data template
 media.data-template.default.Content: /plugins/UnifiedInsertPlusPlugin/jsp/content/mediaTemplateContent.jsp
+
+# FileDocument PDF template
+media.template.default.application/pdf: /plugins/UnifiedInsertPlusPlugin/jsp/content/mediaTemplateContent.jsp
