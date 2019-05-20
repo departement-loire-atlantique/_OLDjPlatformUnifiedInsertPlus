@@ -14,6 +14,10 @@ Les contenus sous forme de simple lien sont au format : <jalios:link data-jalios
 
 ## Selection d'un contenu unifié
 
+Propriété :
++ unified-insert.items.content.jsp: plugins/UnifiedInsertPlusPlugin/jsp/content/unifiedInsertContent.jsp
++ unified-insert.items.content.icon: glyph: glyphicons-article
+
 Fichier :
 + plugins/UnifiedInsertPlusPlugin/jsp/content/unifiedInsertContent.jsp
 
