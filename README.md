@@ -1,15 +1,25 @@
 # jPlatformUnifiedInsertPlus
 
 
-## Ajout unifiée
+## Insertion unifiée
 
-Lors d'un ajout unifié dans un champ wysiwyg vers un contenu celui-ci est affiché avec la règle de gabarit suivant :
+La mécanique d'insertion unifiée permet de proposer à l'utilisateur l'insertion rapide de différents types de contenus.
+
+Lors d'un ajout unifié dans un champ wysiwyg vers un contenu intégré, celui-ci est affiché avec la règle de gabarit suivant :
 - Content => embed -> full
 - Portlet => box -> full
 
-Les contenus sont ajoutés dans le wysiwyg avec en JHtml : <jalios:media data-jalios-source="INFO_CONTENU" />
-
+Les contenus intégrés sont ajoutés dans le wysiwyg avec en JHtml : <jalios:media data-jalios-source="INFO_CONTENU" />
 Les contenus sous forme de simple lien sont au format : <jalios:link data-jalios-id="ID_CONTENU" />
+
+## Selection d'un contenu unifié
+
+Fichier :
++ plugins/UnifiedInsertPlusPlugin/jsp/content/unifiedInsertContent.jsp
+
+Fichier natif modifié 
+- work/doPubList.jsp
+(Modification de la ligne 299 : ajout de data-jalios-source="<%= itPub.getId() %> )
 
 ## Contenus unifiés
 
