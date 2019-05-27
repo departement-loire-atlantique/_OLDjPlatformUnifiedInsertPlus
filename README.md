@@ -1,5 +1,23 @@
 # jPlatformUnifiedInsertPlus
 
+<p>
+  <a href="https://travis-ci.org/organizations/departement-loire-atlantique">
+    <img src="https://travis-ci.org/departement-loire-atlantique/jPlatformUnifiedInsertPlus.svg?branch=master" />
+  </a>
+  <a href="https://sonarcloud.io/organizations/departement-loire-atlantique">
+    <img src="https://sonarcloud.io/api/project_badges/measure?project=departement-loire-atlantique_jPlatformUnifiedInsertPlus&metric=ncloc" />
+    <img src="https://sonarcloud.io/api/project_badges/measure?project=departement-loire-atlantique_jPlatformUnifiedInsertPlus&metric=bugs" />
+    <img src="https://sonarcloud.io/api/project_badges/measure?project=departement-loire-atlantique_jPlatformUnifiedInsertPlus&metric=code_smells" />
+    <img src="https://sonarcloud.io/api/project_badges/measure?project=departement-loire-atlantique_jPlatformUnifiedInsertPlus&metric=coverage" />
+    <img src="https://sonarcloud.io/api/project_badges/measure?project=departement-loire-atlantique_jPlatformUnifiedInsertPlus&metric=duplicated_lines_density" />
+    <img src="https://sonarcloud.io/api/project_badges/measure?project=departement-loire-atlantique_jPlatformUnifiedInsertPlus&metric=sqale_rating" />
+    <img src="https://sonarcloud.io/api/project_badges/measure?project=departement-loire-atlantique_jPlatformUnifiedInsertPlus&metric=alert_status" />
+    <img src="https://sonarcloud.io/api/project_badges/measure?project=departement-loire-atlantique_jPlatformUnifiedInsertPlus&metric=reliability_rating" />
+    <img src="https://sonarcloud.io/api/project_badges/measure?project=departement-loire-atlantique_jPlatformUnifiedInsertPlus&metric=security_rating" />
+    <img src="https://sonarcloud.io/api/project_badges/measure?project=departement-loire-atlantique_jPlatformUnifiedInsertPlus&metric=sqale_index" />
+    <img src="https://sonarcloud.io/api/project_badges/measure?project=departement-loire-atlantique_jPlatformUnifiedInsertPlus&metric=vulnerabilities" />
+    </a>
+</p>
 
 ## Insertion unifiée
 
