@@ -1,23 +1,5 @@
 # jPlatformUnifiedInsertPlus
 
-<p>
-  <a href="https://travis-ci.org/organizations/departement-loire-atlantique">
-    <img src="https://travis-ci.org/departement-loire-atlantique/jPlatformUnifiedInsertPlus.svg?branch=master" />
-  </a>
-  <a href="https://sonarcloud.io/organizations/departement-loire-atlantique">
-    <img src="https://sonarcloud.io/api/project_badges/measure?project=departement-loire-atlantique_jPlatformUnifiedInsertPlus&metric=ncloc" />
-    <img src="https://sonarcloud.io/api/project_badges/measure?project=departement-loire-atlantique_jPlatformUnifiedInsertPlus&metric=bugs" />
-    <img src="https://sonarcloud.io/api/project_badges/measure?project=departement-loire-atlantique_jPlatformUnifiedInsertPlus&metric=code_smells" />
-    <img src="https://sonarcloud.io/api/project_badges/measure?project=departement-loire-atlantique_jPlatformUnifiedInsertPlus&metric=coverage" />
-    <img src="https://sonarcloud.io/api/project_badges/measure?project=departement-loire-atlantique_jPlatformUnifiedInsertPlus&metric=duplicated_lines_density" />
-    <img src="https://sonarcloud.io/api/project_badges/measure?project=departement-loire-atlantique_jPlatformUnifiedInsertPlus&metric=sqale_rating" />
-    <img src="https://sonarcloud.io/api/project_badges/measure?project=departement-loire-atlantique_jPlatformUnifiedInsertPlus&metric=alert_status" />
-    <img src="https://sonarcloud.io/api/project_badges/measure?project=departement-loire-atlantique_jPlatformUnifiedInsertPlus&metric=reliability_rating" />
-    <img src="https://sonarcloud.io/api/project_badges/measure?project=departement-loire-atlantique_jPlatformUnifiedInsertPlus&metric=security_rating" />
-    <img src="https://sonarcloud.io/api/project_badges/measure?project=departement-loire-atlantique_jPlatformUnifiedInsertPlus&metric=sqale_index" />
-    <img src="https://sonarcloud.io/api/project_badges/measure?project=departement-loire-atlantique_jPlatformUnifiedInsertPlus&metric=vulnerabilities" />
-    </a>
-</p>
 
 ## Insertion unifiée
 
@@ -27,8 +9,32 @@ Lors d'un ajout unifié dans un champ wysiwyg vers un contenu intégré, celui-c
 - Content => embed -> full
 - Portlet => box -> full
 
-Les contenus intégrés sont ajoutés dans le wysiwyg avec en JHtml : <jalios:media data-jalios-source="INFO_CONTENU" />
-Les contenus sous forme de simple lien sont au format : <jalios:link data-jalios-id="ID_CONTENU" />
+**ATTENTION : ** (note SGU 29/08/2019)
+
+Lors de l'inclusion d'un ou plusieurs gabarits "Full" dans une zone Wysiwyg via l'insertion unifiée, la publication courante en front devient la dernière publication "Full" insérée. 
+
+
+Idem lors de l'inclusion d'un gabarit via : 
+
+``<jalios:include pub="<%=maPub%>" usage="embed"/``
+
+Cela a des effets de bords sur le module SEO, notamment lorsqu'on doit générer les "META INDEX" et "META FOLLOW" de la publication courante. Les résultas se trouvent faussés...
+
+
+Je propose, dans un premier temps, de n'afficher que les gabarits "**embed**" via l'insertion unifiée, de la façon suivante (cf **mediaTemplateContent.jsp**):
+ 
+``String template=content.getTemplatePath("embed",false);``
+
+``request.setAttribute("obj",maPub);``
+
+``<jalios:include jsp="<%= template %>"/>``
+
+
+
+
+Les contenus intégrés sont ajoutés dans le wysiwyg avec en JHtml :``<jalios:media data-jalios-source="INFO_CONTENU" /``
+
+Les contenus sous forme de simple lien sont au format : ``<jalios:link data-jalios-id="ID_CONTENU" /``
 
 ## Selection d'un contenu unifié
 
@@ -56,7 +62,10 @@ Fichier natif modifié
 - Portlet
 
 
-### TODO Liste de documents
+### Liste de documents / sites
+L'idée retenue est de construire les listes de documents / sites web via des portlets requetes/itération, en construisant la requête ad hoc, ou en indiquant explicitement les contenus via l'onglet avancé (Champ multivalué "Premières publications").
+
+
 
 ### Calameo
 
@@ -73,4 +82,11 @@ Utilise l'url du 'contenu sur internet' pour la contribution.
 Fichier :
 + plugins/UnifiedInsertPlusPlugin/jsp/media/url/mediaTemplateFlickr.jsp
 
+L'idée est de se passer progressivement des diaporamas Flickr pour les internaliser dans jPlatform sous forme de carousel.
 
+### SoundCloud
+
+Utilise l'url du 'contenu sur internet' pour la contribution.
+
+Fichier :
++ plugins/UnifiedInsertPlusPlugin/jsp/media/url/mediaTemplateSoundCloud.jsp
