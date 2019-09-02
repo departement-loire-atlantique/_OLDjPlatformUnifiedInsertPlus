@@ -9,28 +9,6 @@ Lors d'un ajout unifié dans un champ wysiwyg vers un contenu intégré, celui-c
 - Content => embed -> full
 - Portlet => box -> full
 
-**ATTENTION : ** (note SGU 29/08/2019)
-
-Lors de l'inclusion d'un ou plusieurs gabarits "Full" dans une zone Wysiwyg via l'insertion unifiée, la publication courante en front devient la dernière publication "Full" insérée. 
-
-
-Idem lors de l'inclusion d'un gabarit via : 
-
-``<jalios:include pub="<%=maPub%>" usage="embed"/``
-
-Cela a des effets de bords sur le module SEO, notamment lorsqu'on doit générer les "META INDEX" et "META FOLLOW" de la publication courante. Les résultas se trouvent faussés...
-
-
-Je propose, dans un premier temps, de n'afficher que les gabarits "**embed**" via l'insertion unifiée, de la façon suivante (cf **mediaTemplateContent.jsp**):
- 
-``String template=content.getTemplatePath("embed",false);``
-
-``request.setAttribute("obj",maPub);``
-
-``<jalios:include jsp="<%= template %>"/>``
-
-
-
 
 Les contenus intégrés sont ajoutés dans le wysiwyg avec en JHtml :``<jalios:media data-jalios-source="INFO_CONTENU" /``
 
