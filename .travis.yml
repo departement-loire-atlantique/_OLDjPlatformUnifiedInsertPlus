@@ -6,12 +6,6 @@ env:
 services:
 - docker
 
-addons:
-  sonarcloud:
-    organization: departement-loire-atlantique
-    token:
-      secure: LlboIUDhx+4rrXSy1l539Cy+xY2gUK4JHD6u3O0W3XHXF85WpkGWLtBwFe3KNb7Rg6B44l2X0cjQEPMMttKymwsd970XNESwUmVCAOCNRL706eZGV9J5sy5MDhSX22QwTZankl3tAbBS3RPRfcGmUT98jcQiL9BYRLivl3iW5Dwvd3rrghic4X9cYcvZSs6vzbzJxUvhWOCuouCoM/vEX9FezOWe2/6oqVuxK+yasSwW6F/C19o9Me6gzjYGBTEMz+m3s95OqQV1mE9mHuf3HRpE1aUqVBrZsKh+yeSIREwda67yK+lCjNSFU0ZfZBAI86cib7/cXIkq12xdbqGLPGTMalkcc62vDnMyaVQylL7xGcGK7peDpNX/sonYXGxTiKZ1P9GsxB17aIZldxIF3xd9mGpHdW1/gbtpHQ5+XrPlTspiiZHDNZjGVVUCfJ326MA7Q1IUIGAkZXIRTF/QDs9/fBo3PFKhv8Eb59BWcuihiUxTt2Kk9ThpeyLhm4wyahyyc7mL5GhmBO8EtTeiP/jHR46Zt68WLdRN9+TAhWvW/LVyu0dAFYDoD3UguD0ybgCSfjgWueKgHbfsQ6FUCfE9fofQgKBmSVt5OI67CpR7yJaSxVbV+/Eb6uhZfIXcEgAq8O1xURA4Xpg9R4NJfwBqmHVcC93QeBOCJUVsmyk=
-
 before_script:
 - echo "$DOCKER_PASS" | docker login --username $DOCKER_USER --password-stdin
 - docker pull julienbayle/jplatformbuild
@@ -19,8 +13,6 @@ before_script:
 script:
 - docker run -v ${TRAVIS_BUILD_DIR}:/root/source --name buildimage -t julienbayle/jplatformbuild
 - docker cp buildimage:/root/dist .
-- export CODE_VERSION=`git describe`
-- sonar-scanner -Dsonar.projectVersion=$CODE_VERSION
 
 deploy:
   provider: releases
