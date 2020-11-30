@@ -1,5 +1,10 @@
 # jPlatformUnifiedInsertPlus
 
+<p>
+  <a href="https://travis-ci.com/github/departement-loire-atlantique/jPlatformUnifiedInsertPlus">
+    <img src="https://travis-ci.com/departement-loire-atlantique/jPlatformUnifiedInsertPlus.svg?branch=master" />
+  </a>
+</p>
 
 ## Insertion unifiée
 
